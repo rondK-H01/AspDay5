@@ -1,0 +1,40 @@
+﻿@page
+@model AspDay5.Pages.Clients.indexModel
+@{
+}
+<br />
+<h2>List of Clients</h2>
+<a class="btn btn-primary btn-sm" href='/Clients/Create'>New Client</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th>Created At</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+
+    @* NOT A PART OF THE TASK *@
+    @if (Model.listClients.Count > 0)
+    {
+        @foreach(var x in Model.listClients)
+        {
+            <tr>
+                <td>@x.id</td>
+                <td>@x.name</td>
+                <td>@x.email</td>
+                <td>@x.phone</td>
+                <td>@x.address</td>
+                <td>@x.created_at</td>
+                <td></td>
+            </tr>
+        }
+    }
+    @* NOT A PART OF THE TASK *@
+
+</table>
